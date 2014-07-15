@@ -7,11 +7,12 @@ var blobSvc = azure.createBlobService();
 module.exports = {
   upload: function(data) {
     return new Promise(function(fulfil, reject) {
-          var stream = blobSvc.createWriteStreamToBlockBlob('regardcharts', uuid.v4() + '.png');
+          var filename = uuid.v4() + '.png';
+          var stream = blobSvc.createWriteStreamToBlockBlob('regardcharts', filename);
 
           stream.on('error', reject);
           stream.on('close', function() {
-	    fulfil('some url');
+	    fulfil('https://regardproduction.blob.core.windows.net/regardcharts/' + filename);
 	  });
 
           stream.end(data);
