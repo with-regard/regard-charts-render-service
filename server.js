@@ -9,7 +9,7 @@ var app = express();
 
 app.use(bodyParser.json());
 app.post('/render', function(req, res, next) {
-  highcharts.render(sampleOptions, function(err, data) {
+  highcharts.render(req.body, function(err, data) {
     if (err) {
       next(err);
     } else {
