@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "azure-storage": "^0.3.0",
     "body-parser": "^1.4.3",
     "express": "^4.6.1",
-    "node-highcharts": "0.0.2"
+    "node-highcharts": "0.0.2",
+    "promise": "^5.0.0"
   }
 }
