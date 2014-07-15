@@ -1,4 +1,5 @@
 var azure = require('azure-storage');
+var Promise = require('promise');
 
 var blobSvc = azure.createBlobService();
 

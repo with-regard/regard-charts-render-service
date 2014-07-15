@@ -2,7 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var highcharts = require('node-highcharts');
 var azure = require('azure-storage');
-var Promise = require('promise');
 var charts = require('./charts-upload.js');
 var sampleOptions = require('./sample.js');
 
