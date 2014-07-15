@@ -15,7 +15,7 @@ module.exports = {
 	    fulfil('https://regardproduction.blob.core.windows.net/regardcharts/' + filename);
 	  });
 
-          stream.end(data);
+          stream.end(new Buffer(data));
     });
   }
 }
