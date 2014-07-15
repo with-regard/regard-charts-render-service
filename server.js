@@ -15,7 +15,7 @@ app.post('/render', function(req, res, next) {
     } else {
       charts.upload(data).then(function(url) {
         res.json({
-          url: 'some url'
+          url: url
         });
       }, function (err) {
         next(err);
@@ -24,4 +24,4 @@ app.post('/render', function(req, res, next) {
   }); 
 });
 
-app.listen(80);
+app.listen(8080);
