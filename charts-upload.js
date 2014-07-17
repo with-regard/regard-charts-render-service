@@ -8,7 +8,9 @@ module.exports = {
   upload: function(data) {
     return new Promise(function(fulfil, reject) {
           var filename = uuid.v4() + '.png';
-          var stream = blobSvc.createWriteStreamToBlockBlob('regardcharts', filename);
+          var stream = blobSvc.createWriteStreamToBlockBlob('regardcharts', filename, {
+            contentType: 'image/png'
+          });
 
           stream.on('error', reject);
           stream.on('close', function() {
